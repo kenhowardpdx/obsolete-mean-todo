@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('todoListApp')
-.controller('mainCtrl', function($scope, dataService){
+module.exports = MainCtrl;
+
+function MainCtrl ($scope, dataService) {
   
   dataService.getTodos(function(response){
     var todos = response.data.todos;  
@@ -13,4 +14,4 @@ angular.module('todoListApp')
                       completed: false});
   };
   
-})
+}

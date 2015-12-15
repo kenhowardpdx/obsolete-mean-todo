@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('todoListApp')
-.service('dataService', function($http) {
+function DataService ($http) {
   this.getTodos = function(cb) {
     $http.get('/api/todos').then(cb);
   };
@@ -14,4 +13,6 @@ angular.module('todoListApp')
     console.log("I saved " + todos.length + " todos!");
   };
   
-});
+};
+
+module.exports = DataService;
