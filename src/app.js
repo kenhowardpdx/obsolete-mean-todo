@@ -4,6 +4,8 @@ var express = require('express');
 
 var app = express();
 
+require('./database');
+
 app.use('/', express.static('public'));
 
 app.use('/api', require(__dirname + '/api'));
