@@ -9,3 +9,5 @@ mongoose.connect('mongodb://localhost/mean-todo', function(err) {
 		return console.log("Successfully connected to mongo!");
 	}
 });
+
+require('./seed');
